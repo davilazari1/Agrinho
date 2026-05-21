@@ -1,0 +1,20 @@
+header {
+text-align: center; 
+ background-color: green;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+}
+
+
+#btn1 {
+    cursor: pointer;
+}
+
+head {
+    p {
+    font-family: 'Arial', 'sans-serif';
+}
+}
