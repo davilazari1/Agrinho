@@ -1,11 +1,11 @@
 header {
-text-align: center; 
 
     .multicolor {
 background: linear-gradient(to right, MidnightBlue, RoyalBlue, RoyalBlue, DarkTurquoise, DarkTurquoise, LightCyan, white, LightCyan, DarkTurquoise, DarkTurquoise, RoyalBlue, RoyalBlue, MidnightBlue);
 color: black;
 padding: 40px; 
 text-align: center; 
+font-size: 40px;
 border-radius: 5px; 
 
 
@@ -18,8 +18,9 @@ border-radius: 5px;
     cursor: pointer;
 }
 
-head {
-    p {
-    font-family: 'Arial', 'sans-serif';
-}
+main{
+    .Parágrafo {
+        text-align: center;
+        font-size: 30;
+    }
 }
