@@ -1,42 +1,42 @@
-header {
-
-    .multicolor {
-background: linear-gradient(to right, MidnightBlue, RoyalBlue, RoyalBlue, DarkTurquoise, DarkTurquoise, LightCyan, white, LightCyan, DarkTurquoise, DarkTurquoise, RoyalBlue, RoyalBlue, MidnightBlue);
-color: black;
-padding: 40px; 
-text-align: center; 
-font-size: 40px;
-border-radius: 5px; 
-font-family: Georgia, 'Times New Roman', Times, serif;
-}
+body {
+    background-color: #000000;
+    color: #ffffff; 
+    margin: 0;
 }
 
+header .multicolor {
+    background: linear-gradient(to right, MidnightBlue, RoyalBlue, RoyalBlue, DarkTurquoise, DarkTurquoise, LightCyan, white, LightCyan, DarkTurquoise, DarkTurquoise, RoyalBlue, RoyalBlue, MidnightBlue);
+    color: black; /* O texto dentro do header multicolor continua preto para dar contraste */
+    padding: 40px; 
+    text-align: center; 
+    font-size: 40px;
+    border-radius: 5px; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 #btn1 {
     cursor: pointer;
 }
 
-
 .mensagem {
     text-align: center;
     font-size: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
+    color: white; 
 }
-
 
 main .texto {
     text-align: justify;
     font-size: 16px;    
     line-height: 1.6;    
+    color: #e0e0e0; 
 }                                                                                                                                                        
  
 .bloco-imagem-texto {
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    margin-top: 30px;
-
+    margin: 30px;
 }
 
 main .imagem {
@@ -44,6 +44,6 @@ main .imagem {
     height: auto;
     border-radius: 50px;
     flex-shrink: 0;
-
 }
+
 
