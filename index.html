@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Impacto do Estudo</title>
-    <link rel="stylesheet" href="style.css">
 
+
+<head>
+   <!-- Configurações da página -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>O Impacto do Estudo</title>
+   <link rel="stylesheet" href="style.css">
 </head>
 
-<body> 
-    
-    <header>
-        <h1 class="multicolor">O Impacto dos Estudos</h1>
-    </header>
 
-<p class="mensagem">O Estudo muda vidas, e pode mudar a sua!</p>
-
-    <main> 
-        <div class="bloco-imagem-texto"> 
-    
-         <img class="imagem" src="library-pictures-0qxsplgj7fa3setj.jpg" alt="Uma folheando livros em uma estante">        
+<body>
 
 
-        <p class="texto">Fórmulas matemáticas, regras gramaticais, processos biológicos… para quem acredita na importância da educação, e vê os estudos como o meio pelo qual a garotada pode buscar uma vida melhor, entender essas coisas que nem sempre parecem tão interessantes é, sem dúvida, o melhor caminho.
+  <input type="checkbox" id="dark-mode" class="input">
+<label for="dark-mode" class="label">
+   <div class="circle"></div>
+</label>
 
-        Neste início de ano, crianças e jovens que atendemos em todo o Brasil recebem o material pedagógico para um novo ano letivo. Mochila recheada com cadernos, lápis, borracha, régua e todo o necessário para cada faixa etária. Para poder entregar isso e fazer muito mais para milhares de famílias, contamos com o seu apoio! A educação é um direito fundamental de todas as crianças e jovens. E o nosso trabalho vai além…
 
-        Na LBV, sabemos a importância da educação e do ensino formal para que as famílias tenham oportunidades de um futuro melhor. Um exemplo disso é ver que, segundo um relatório da Organização para a Cooperação e Desenvolvimento Econômico, adultos com ensino superior no Brasil ganham 2,5 vezes mais do que os que pararam os estudos no ensino médio.</p>
-    
-        </div>
-    </main>
+<main>
+   <button class="menu-btn" id="open-menu">⋮</button>
 
-</body> 
+   <div class="bg-image" id="bg-image">
+       <h1 class="titulo-sobre-imagem">O Impacto dos Estudos</h1>
+   </div>
+
+   <div class="container">
+      <div class="bloco-imagem-texto">
+          <img class="imagem" src="library-pictures-0qxsplgj7fa3setj.jpg" alt="Uma jovem folheando livros em uma estante">
+         
+          <div class="conteudo-texto">
+              <p class="mensagem">O estudo sempre foi uma das partes mais importantes...</p>
+              <p class="texto">Nas escolas e colégios constituídos...</p>
+          </div>
+      </div>
+   </div>
+
+   <div class="multicolor sidebar" id="sidebar">
+       <button class="close-btn" id="close-menu">&times;</button>
+       <h2>O Impacto dos Estudos</h2>
+   </div>
+</main>
+
+
+  <!-- Script da página -->
+  <script src="index.js"></script>
+
+
+</body>
+
 </html>
+
+
+
+
+
+
 
 

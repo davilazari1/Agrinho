@@ -1,37 +1,151 @@
+/* Configurações gerais da página */
+
 body {
-    background-color: #000000;
-    color: #ffffff; 
-    margin: 0;
+
+background-color: #000;
+
+color: #fff;
+
+margin: 0;
+
+transition: 0.4s;
+
 }
 
-header .multicolor {
-    background: linear-gradient(to right, MidnightBlue, RoyalBlue, RoyalBlue, DarkTurquoise, DarkTurquoise, LightCyan, white, LightCyan, DarkTurquoise, DarkTurquoise, RoyalBlue, RoyalBlue, MidnightBlue);
-    color: black; /* O texto dentro do header multicolor continua preto para dar contraste */
-    padding: 40px; 
-    text-align: center; 
-    font-size: 40px;
-    border-radius: 5px; 
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
+.menu-btn {
+   position: fixed;
+   top: 20px;
+   left: 20px; /* Fica no canto superior esquerdo */
+   background: #111;
+   color: white;
+   border: 1px solid #333;
+   font-size: 30px;
+   padding: 5px 15px;
+   cursor: pointer;
+   border-radius: 5px;
+   z-index: 999; /* Fica visível acima do fundo, mas abaixo da sidebar */
 }
 
-#btn1 {
-    cursor: pointer;
+/* Título que costumava ficar no topo (opcional, caso queira um título simples no conteúdo) */
+.titulo-central {
+   text-align: center;
+   font-family: Georgia, serif;
+   font-size: 35px;
+   margin-top: 20px;
 }
 
+/* Transformando o .multicolor em Sidebar Direita */
+.multicolor.sidebar {
+   position: fixed;
+   top: 0;
+   right: -300px; /* Começa escondida para fora da tela do lado direito */
+   width: 300px;
+   height: 100vh;
+   z-index: 2000; /* Número bem alto para cobrir absolutamente tudo */
+   transition: 0.4s ease; /* Animação suave para deslizar */
+   box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+   padding: 60px 20px;
+   box-sizing: border-box;
+
+   /* Seu gradiente original ajustado para o sentido vertical */
+   background: linear-gradient(
+       to bottom,
+       MidnightBlue,
+       RoyalBlue,
+       DarkTurquoise,
+       LightCyan,
+       white,
+       LightCyan,
+       DarkTurquoise,
+       RoyalBlue,
+       MidnightBlue
+   );
+   color: black;
+}
+
+/* Classe que o JavaScript vai adicionar para fazer a barra aparecer */
+.multicolor.sidebar.active {
+   right: 0; /* Desloca a barra para dentro da tela */
+}
+
+/* Botão de fechar dentro da sidebar */
+.close-btn {
+   position: absolute;
+   top: 15px;
+   left: 15px;
+   background: none;
+   border: none;
+   font-size: 30px;
+   cursor: pointer;
+   color: black;
+}
+
+/* Container do conteúdo da direita */
+.container-conteudo {
+   flex: 1; /* Faz o conteúdo ocupar todo o resto do espaço da tela */
+   display: flex;
+   flex-direction: column;
+}
+
+.bg-image {
+   width: 100%;
+   height: 65vh; /* Mantido o tamanho original do seu primeiro código */
+
+   background-image: url("educacao-integral-nova-regra-define-jornada-minima-nas-escolas_g.jpg");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   /* O Flexbox aqui serve para centralizar o título bem no meio da imagem */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   /* Garante que se a imagem for muito clara, o texto ainda seja legível */
+   position: relative;
+}
+
+
+.bg-image::before {
+   content: "";
+   position: absolute;
+   top: 0; left: 0; width: 100%; height: 100%;
+   background: rgba(0, 0, 0, 0.4); /* Escurece 40% da imagem */
+   z-index: 1;
+}
+
+/* Estilização do título em cima da imagem */
+.titulo-sobre-imagem {
+   color: #ffffff; /* Texto branco para contrastar com a imagem */
+   font-size: 50px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   text-align: center;
+   z-index: 2; /* Garante que o texto fique na frente do efeito escurecido */
+   
+   /* Sombra no texto para dar um efeito elegante e destacar do fundo */
+   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
+   margin: 0;
+   padding: 0 20px;
+}
+
+
+/* Texto de destaque */
 .mensagem {
     text-align: center;
     font-size: 25px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-main .texto {
+/* Texto principal */
+.texto {
     text-align: justify;
-    font-size: 16px;    
-    line-height: 1.6;    
-    color: #e0e0e0; 
-}                                                                                                                                                        
- 
+    font-size: 17px;
+    line-height: 1.6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Estrutura da imagem */
 .bloco-imagem-texto {
     display: flex;
     align-items: flex-start;
@@ -39,11 +153,99 @@ main .texto {
     margin: 30px;
 }
 
-main .imagem {
+
+/* Imagem principal */
+.imagem {
     width: 250px;
     height: auto;
     border-radius: 50px;
-    flex-shrink: 0;
 }
 
+
+/* Botão Dark Mode */
+.label {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    width: 70px;
+    height: 40px;
+
+    background-color: lightgray;
+    border-radius: 20px;
+
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Checkbox invisível */
+.input {
+    visibility: hidden;
+}
+
+/* Círculo do botão */
+.circle {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+
+    width: 34px;
+    height: 34px;
+
+    background-color: white;
+    border-radius: 50%;
+
+    animation: toggleOff 0.4s linear forwards;
+}
+
+/* Estado ativo do botão */
+.input:checked + .label {
+    background-color: white;
+}
+
+.input:checked + .label .circle {
+    background-color: black;
+    animation: toggleOn 0.4s linear forwards;
+}
+
+/* Animação para direita */
+@keyframes toggleOn {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(30px);
+    }
+}
+
+/* Animação para esquerda */
+@keyframes toggleOff {
+    from {
+        transform: translateX(30px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Imagem de fundo */
+.bg-image {
+    width: 100%;
+    height: 65vh;
+
+    background-image: url("educacao-integral-nova-regra-define-jornada-minima-nas-escolas_g.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Ajustes para celular */
+@media (max-width: 500px) {
+    .container {
+        padding: 10px;
+    }
+}
 
