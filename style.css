@@ -1,15 +1,9 @@
 /* Configurações gerais da página */
-
 body {
-
 background-color: #000;
-
 color: #fff;
-
 margin: 0;
-
 transition: 0.4s;
-
 }
 
 
@@ -48,18 +42,14 @@ transition: 0.4s;
    padding: 60px 20px;
    box-sizing: border-box;
 
-   /* Seu gradiente original ajustado para o sentido vertical */
+   /* Gradiente no sentido vertical */
    background: linear-gradient(
        to bottom,
-       MidnightBlue,
-       RoyalBlue,
        DarkTurquoise,
        LightCyan,
        white,
        LightCyan,
-       DarkTurquoise,
-       RoyalBlue,
-       MidnightBlue
+       DarkTurquoise
    );
    color: black;
 }
@@ -83,25 +73,22 @@ transition: 0.4s;
 
 /* Container do conteúdo da direita */
 .container-conteudo {
-   flex: 1; /* Faz o conteúdo ocupar todo o resto do espaço da tela */
+   flex: 1; 
    display: flex;
    flex-direction: column;
 }
 
 .bg-image {
    width: 100%;
-   height: 65vh; /* Mantido o tamanho original do seu primeiro código */
-
+   height: 65vh; 
    background-image: url("educacao-integral-nova-regra-define-jornada-minima-nas-escolas_g.jpg");
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
-
-   /* O Flexbox aqui serve para centralizar o título bem no meio da imagem */
+   /* O Flexbox serve para centralizar o título bem no meio da imagem */
    display: flex;
    justify-content: center;
    align-items: center;
-   
    /* Garante que se a imagem for muito clara, o texto ainda seja legível */
    position: relative;
 }
@@ -111,7 +98,7 @@ transition: 0.4s;
    content: "";
    position: absolute;
    top: 0; left: 0; width: 100%; height: 100%;
-   background: rgba(0, 0, 0, 0.4); /* Escurece 40% da imagem */
+   background: rgba(0, 0, 0, 0.4); /* Escurece 30% da imagem */
    z-index: 1;
 }
 
@@ -122,7 +109,6 @@ transition: 0.4s;
    font-family: Georgia, 'Times New Roman', Times, serif;
    text-align: center;
    z-index: 2; /* Garante que o texto fique na frente do efeito escurecido */
-   
    /* Sombra no texto para dar um efeito elegante e destacar do fundo */
    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
    margin: 0;
@@ -132,18 +118,40 @@ transition: 0.4s;
 
 /* Texto de destaque */
 .mensagem {
-    text-align: center;
-    font-size: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+   text-align: center;
+   font-size: 1.5rem; 
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   justify-content: center;
+   margin-bottom: 60px;
 }
 
 /* Texto principal */
 .texto {
-    text-align: justify;
-    font-size: 17px;
-    line-height: 1.6;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+   text-align: justify;
+   font-size: 1.05rem; 
+   line-height: 1.6;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   margin-bottom: 30px;
 }
+
+/* Ajuste na classe aliment para que ela se comporte bem lado a lado */
+.text2 { 
+    text-align: center;
+   font-size: 1.05rem; 
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   justify-content: center;
+   margin-bottom: 160px;
+}
+
+
+.text3 { 
+    text-align: center;
+   font-size: 1.05rem; 
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   justify-content: center;
+   margin-bottom: 90px;
+}
+
 
 /* Estrutura da imagem */
 .bloco-imagem-texto {
@@ -151,51 +159,79 @@ transition: 0.4s;
     align-items: flex-start;
     gap: 20px;
     margin: 30px;
+    margin-top: 80px; 
 }
 
 
 /* Imagem principal */
 .imagem {
-    width: 250px;
+    width: 270px;
     height: auto;
     border-radius: 50px;
 }
 
 
-/* Botão Dark Mode */
-.label {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-
-    width: 70px;
-    height: 40px;
-
-    background-color: lightgray;
-    border-radius: 20px;
-
-    cursor: pointer;
-    z-index: 1000;
+/* Imagem principal 2*/
+.imagem2 {
+    width: 270px;
+    height: auto;
+    border-radius: 50px;
 }
+
+
+/* Cria uma coluna vertical para as imagens */
+.coluna-imagens {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Controla o espaço entre a imagem 1 e a imagem 2 */
+}
+
+/* Garante que o bloco principal alinhe a coluna de imagens com o texto */
+.bloco-imagem-texto {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px; /* Espaço entre as imagens e o texto */
+    margin: 30px;
+    margin-top: 40px; 
+}
+
+
+/* Container interno do botão dentro da sidebar */
+.dark-mode-container {
+    margin-top: 40px; /* Espaçamento abaixo do título */
+    display: flex;
+    justify-content: flex-start; /* Pode alinhar à esquerda */
+    align-items: center;
+}
+
+
+/* Remove position fixed da label */
+.label {
+   position: relative; /* Agora relativo ao container da sidebar */
+   width: 70px;
+   height: 40px;
+   background-color: lightgray;
+   border-radius: 20px;
+   cursor: pointer;
+   z-index: 100; /* Mantém sobre o fundo da sidebar */
+}
+
 
 /* Checkbox invisível */
 .input {
     visibility: hidden;
 }
 
-/* Círculo do botão */
+/* Ajuste do círculo (mesmo CSS já existente) */
 .circle {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-
-    width: 34px;
-    height: 34px;
-
-    background-color: white;
-    border-radius: 50%;
-
-    animation: toggleOff 0.4s linear forwards;
+   position: absolute;
+   top: 3px;
+   left: 3px;
+   width: 34px;
+   height: 34px;
+   background-color: white;
+   border-radius: 50%;
+   animation: toggleOff 0.4s linear forwards;
 }
 
 /* Estado ativo do botão */
@@ -249,3 +285,44 @@ transition: 0.4s;
     }
 }
 
+
+/* Container dos botões de tamanho de fonte */
+.font-size-container {
+  position: fixed;
+  top: 20px;
+  right: 20px; /* Alinha no canto superior direito */
+  display: flex;
+  gap: 10px;
+  z-index: 999; /* Fica na mesma camada do botão de menu */
+}
+
+/* Estilização circular dos botões */
+.font-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; /* Torna o botão perfeitamente circular */
+  border: 1px solid #333;
+  background-color: #111;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito de passar o mouse */
+.font-btn:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Ajuste para não sumir no modo claro */
+body[style*="background-color: white"] .font-btn {
+  background-color: #eee;
+  color: black;
+  border: 1px solid #ccc;
+}

@@ -5,7 +5,6 @@ const bgImageEl = document.getElementById("bg-image");
 
 // Recupera o modo salvo
 inputEl.checked = JSON.parse(localStorage.getItem("mode"));
-
 updateBody();
 
 // Atualiza o tema da página
@@ -61,4 +60,33 @@ openBtn.addEventListener('click', () => {
 // Fecha a barra lateral ao clicar no 'X'
 closeBtn.addEventListener('click', () => {
     sidebar.classList.remove('active');
+});
+
+
+// 1. Seleção dos botões
+const increaseFontBtn = document.getElementById('increase-font');
+const decreaseFontBtn = document.getElementById('decrease-font');
+
+// 2. Começa em 100% (tamanho normal do navegador)
+let currentFontSize = 100;
+
+// 3. Função que altera o tamanho da fonte diretamente na raiz do site
+function updateFontSize() {
+   document.documentElement.style.fontSize = currentFontSize + "%";
+}
+
+// 4. Ouvinte de clique para aumentar
+increaseFontBtn.addEventListener('click', () => {
+   if (currentFontSize < 140) { // Limite máximo de 140%
+       currentFontSize += 10;
+       updateFontSize();
+   }
+});
+
+// 5. Ouvinte de clique para diminuir
+decreaseFontBtn.addEventListener('click', () => {
+   if (currentFontSize > 80) { // Limite mínimo de 80%
+       currentFontSize -= 10;
+       updateFontSize();
+   }
 });
