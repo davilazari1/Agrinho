@@ -153,6 +153,22 @@ transition: 0.4s;
 }
 
 
+.dados {
+    text-align: justify;
+   font-size: 1.1rem; 
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   margin-bottom: 5px;
+}
+
+
+.dad2s {
+    text-align: justify;
+   font-size: 1.1rem; 
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   margin-bottom: 5px;
+}
+
+
 /* Estrutura da imagem */
 .bloco-imagem-texto {
     display: flex;
